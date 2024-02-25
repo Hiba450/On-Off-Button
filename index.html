@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>   
+<style>
+    body{
+        background-color: black;
+    }
+    #b{
+        width: 100%;
+        height: 400px;
+        border: 1px solid white;
+        margin-top: 200px;
+    }
+    #o{
+       margin-left: 550px; 
+       margin-top: 100px;
+    }
+     
+        
+</style>
+    </head>
+<body>
+   <div id="b"> 
+    <img src="2.jpeg" style="margin-left: 550px; " id="image">
+    <img src="off.jpg" style="margin-left: 550px; " id="image1">
+    <br>
+   <button id="o" style="width: 70px; height: 40px;">ON</button>
+   
+   <button id="f" style="width: 70px; height: 40px;">OFF</button>
+   
+    </div>
+   <script>
+
+    $(document).ready(function () { 
+        $("#image").hide(); 
+        $("#image1").hide(); 
+        $("#f").attr('disabled', true); 
+        $("#f").click(function () { 
+            $("#image").hide(); 
+            $("#image1").hide(); 
+            $("#f").attr('disabled', true); 
+            $("#o").attr('disabled', false); 
+  
+        }); 
+        $("#o").click(function () { 
+            $("#image").show(); 
+             $("#image1").hide(); 
+            $("#f").attr('disabled', false); 
+            $("#o").attr('disabled', true); 
+        }); 
+    })
+         $(document).ready(function () { 
+        $("#image1").hide(); 
+        $("#image").hide();
+        $("#f").attr('disabled', true); 
+        $("#f").click(function () { 
+            $("#image").hide(); 
+            $("#o").attr('disabled', true); 
+            $("#f").attr('disabled', false); 
+  
+        }); 
+        $("#f").click(function () { 
+            $("#image1").show(); 
+            $("#image").hide(); 
+            $("#o").attr('disabled', false); 
+            $("#f").attr('disabled', true); 
+        }); 
+    }); 
+
+    //  $(document).ready(function () { 
+    //     $("#image").hide(); 
+    //     $("#image1").hide(); 
+    //     $("#o").attr('visibility', true); 
+    //     $("#o").click(function () { 
+    //         $("#image").hide(); 
+    //         $("#o").attr('disabled', true); 
+    //         $("#f").attr('disabled', false); 
+  
+    //     }); 
+        
+    //     $("#f").click(function () { 
+    //         $("#image1").show(); 
+    //         $("#o").attr('disabled', true); 
+    //         $("#f").attr('disabled', false); 
+  
+    //     }); 
+    // })
+       
+    //     $("#o").click(function () { 
+    //         $("#image").show(); 
+    //         $("#f").attr('disabled', false); 
+    //         $("#0").attr('disabled', true); 
+    //     }); 
+    // }); 
+    // $(document).ready(function () { 
+    //     $("#image1").hide(); 
+    //     $("#o").attr('disabled', true); 
+    //     $("#o").click(function () { 
+    //         $("#image1").hide(); 
+    //         $("#o").attr('disabled', true); 
+    //         $("#f").attr('disabled', false); 
+  
+    //     }); 
+       
+    //     $("#o").click(function () { 
+    //         $("#image1").show(); 
+    //         $("#o").attr('disabled', false); 
+    //         $("#f").attr('disabled', true); 
+    //     }); 
+    // }); 
+    // function myfunction(){
+    //     $("adc").css("visibility", "hidden");
+    // }
+    // // $("#stop").click(function () {
+    // //     $("#panel").stop();
+        
+    // // });
+    // $(document).ready(function () {
+    //     $("#adc").css("visibility", "hidden");
+    //     $("#o").click(function () {
+    //         $("#onn").hide(100);
+    //     })
+        
+    // })
+    // $(document).ready(function () {
+    //     $("#f").click(function () {
+    //         $("#off").hide(100);
+    //     })
+        
+    // })
+
+   </script> 
+ 
+</body>
+</html>
